@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>20170511Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <style>
+    html,
+    body {
+        font-family: 微軟正黑體, "Arial";
+        background-color: #000;
+    }
+    
+    .count {
+        float: left;
+        margin-right: 5px;
+        color: #fff;
+        font-size: 62px;
+        text-align: right;
+    }
+    
+    .item,
+    .boxes {
+        cursor: pointer;
+        margin: 0 -15px;
+    }
+    
+    .item {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+	padding: 15px;
+        height: 60vmin;
+    }
+    
+    .boxes:before,
+    .boxes:after {
+        content: '';
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 30px;
+        bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: all .5s;
+    }
+    
+    .boxes:before {
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        transform: scale(0, 1);
+    }
+    
+    .boxes:after {
+        border-top: none;
+        border-bottom: none;
+        transform: scale(1, 0);
+    }
+    
+    .boxes:hover:before,
+    .boxes:hover:after {
+        transform: scale(1, 1);
+    }
+    
+    .boxes:hover .btn:before,
+    .boxes:hover .btn:after {
+        width: calc((100% - 180px)/2);
+    }
+    
+    .boxes:hover .btn span {
+        opacity: 1;
+    }
+    
+    .boxes img {
+        opacity: 0.5;
+    }
+    
+    .boxes img:hover{
+        opacity: 1.0;
+    }
+
+    .boxes .textBox {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .boxes .textBox b {
+        position: relative;
+        display: block;
+        font-size: 3.0rem;
+        letter-spacing: .1em;
+        font-weight: bold;
+    }
+    
+    .boxes .textBox b:after {
+        content: '';
+        display: block;
+        margin: 5px auto;
+        width: 326px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .boxes .textBox em {
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: .11em;
+        text-transform: uppercase;
+    }
+    
+    .boxes .btn {
+        position: absolute;
+        left: 0;
+        bottom: 25px;
+        z-index: 99;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .boxes .btn:before,
+    .boxes .btn:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        width: 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all .5s;
+    }
+    
+    .boxes .btn:before {
+        left: 30px;
+    }
+    
+    .boxes .btn:after {
+        right: 30px;
+    }
+    
+    .boxes .btn span {
+        display: block;
+        color: rgba(255, 255, 255, 0.7);
+        opacity: 0;
+        transition: all .9s;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="item">
+                    <div class="count num" data-end="250">250</div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="item">
+                    <div class="count num" data-end="6000000">6000000</div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <a>
+                    <div class="boxes">
+                        <div class="img">
+                            <img src="images/01.jpg" class="img-responsive">
+                        </div>
+                        <div class="textBox">
+                            <b>春天</b>
+                            <em>SPRING</em>
+                        </div>
+                        <div class="btn"><span>LISTEN ME</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="boxes">
+                    <div class="img">
+                        <img src="images/02.jpg" class="img-responsive">
+                    </div>
+                    <div class="textBox">
+                        <b>夏天</b>
+                        <em>SUMMER</em>
+                    </div>
+                    <div class="btn"><span>LISTEN ME</span></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="boxes">
+                    <div class="img">
+                        <img src="images/03.jpg" class="img-responsive">
+                    </div>
+                    <div class="textBox">
+                        <b>秋天</b>
+                        <em>FALL</em>
+                    </div>
+                    <div class="btn"><span>LISTEN ME</span></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="boxes">
+                    <div class="img">
+                        <img src="images/04.jpg" class="img-responsive">
+                    </div>
+                    <div class="textBox">
+                        <b>冬天</b>
+                        <em>WINTER</em>
+                    </div>
+                    <div class="btn"><span>LISTEN ME</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="Scripts/jquery.animateNumber.js"></script>
+    <script src="Scripts/waypoint.js"></script>
+    <script>
+    $(window).load(function() {
+        $('.item .count').waypoint(function() {
+            $(this).addClass('num');
+
+            $('.num').each(function() {
+                var countNumber = parseInt($(this).data('end')),
+                    comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+
+                $(this).animateNumber({
+                    number: countNumber,
+                    numberStep: comma_separator_number_step
+                }, 5000);
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>
