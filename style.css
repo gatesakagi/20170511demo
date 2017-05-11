@@ -71,7 +71,7 @@
         opacity: 0.5;
     }
     
-    .boxes img:hover{
+    .boxes:hover img {
         opacity: 1.0;
     }
 
